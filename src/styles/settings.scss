@@ -1,0 +1,29 @@
+/* Variables */
+
+$radius-standard: 8px;
+$radius-circle: 50%;
+$base-size: 12px;
+$transition: all .5s linear;
+
+/* Colors */
+
+$color-light: #fff;
+$color-dark: #2f3542;
+$color-primary: #4f70f4;
+$color-secondary: #a17dfa;
+$color-success: #26de81;
+$color-warning: #f03434;
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap&subset=latin-ext');
+$font-text: 'Poppins', sans-serif;
+
+/* Mixins */
+
+@mixin flex($flex-direction, $justify-content, $align-items ) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
