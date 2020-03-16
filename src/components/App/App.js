@@ -5,33 +5,45 @@ import PageTitle from '../PageTitle/PageTitle';
 import Button from '../Button/Button';
 import Card from '../Card/CardContainer';
 
-const App = ({titles, cards}) => {
+class App extends React.Component {
 
-  // in fact hardcoded solution to get titles[0] as we have only one page title now 
-  const title = titles[0].content;
+  static propTypes = {
+    titles: PropTypes.array,
+    cards: PropTypes.array,
+    addCard: PropTypes.func,
+  }
+  
+  handleAddCard = (addCard) => {
+    const newCategory = prompt('Please enter new category e.g. Nationality', 'Nationality');
+    const newItem = prompt('Please enter your text for chosen category e.g. German', 'German');    
+    if (!(newItem == null || newItem === '') || (newCategory == null || newCategory === '')) {
+      addCard(newItem, newCategory);
+    }
+  }
 
-  return (
-    <div className={styles.component}>
-      <PageTitle title={title}/>
-      <div className={styles.content}>
-        {cards.map(card =>
-          <Card 
-            key={card.id} 
-            id={card.id}
-            content={card.content} 
-            category={card.category}
-          />)}
+  render() {
+    const {addCard, titles, cards} = this.props;
+    /* in fact hardcoded solution to get titles[0] as we have only one page title now */
+    const title = titles[0].content;
+    return (
+      <div className={styles.component}>
+        <PageTitle title={title}/>
+        <div className={styles.content}>
+          {/* TODO: add vertical divider*/}
+          {cards.map(card =>
+            <Card 
+              key={card.id} 
+              id={card.id}
+              content={card.content} 
+              category={card.category}
+            />)}
+        </div>
+        <div className={styles.buttonWrapper}>
+          <Button variant='bigplus' handleAddCard={()=> this.handleAddCard(addCard)} />
+        </div>
       </div>
-      <div>
-        <Button variant='bigplus'/>
-      </div>
-    </div>
-  );
-};
-
-App.propTypes = {
-  titles: PropTypes.array,
-  cards: PropTypes.array,
-};
+    );
+  }
+}
 
 export default App;
