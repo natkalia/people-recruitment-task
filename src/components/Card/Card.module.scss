@@ -41,18 +41,14 @@
   font-weight: 700;
 }
 
-.content {
-  @include flex(row, flex-start, normal);
-}
-
 /* horizontal line left to Card */
 
 .simple::after, .complicated::after {
   content: "";
   position: absolute;
-  width: $base-size * 6.6;
+  width: $base-size * 6.8;
   height: $base-thickness;
-  left: -($base-size * 7.6);
+  left: -($base-size * 7.7);
   background-color: lighten($color-dark, 50%);
 }
 
@@ -72,8 +68,3 @@
   padding: $base-size * 1 0;
   align-self: flex-end;
 }
-
-.buttonWrapper {
-  margin-left: $base-size * 2.2;
-}
-

@@ -47,12 +47,10 @@ class App extends React.Component {
               />
             </div>)}
         </div>
-        <div className={styles.buttonWrapper}>
-          <Button 
-            variant='bigplus' 
-            handleAddCard={()=> this.handleAddCard(addCard)}
-          />
-        </div>
+        <Button 
+          variant='bigplus' 
+          handleAddCard={()=> this.handleAddCard(addCard)}
+        />
       </div>
     );
   }

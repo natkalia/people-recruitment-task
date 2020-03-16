@@ -30,9 +30,9 @@
   &.plus {
     background: linear-gradient(lighten($color-success, 10%) 25%, lighten($color-plus, 10%));
     box-shadow: 2px 5px 6px lighten($color-plus, 30%);
-    height: $base-size * 3;
-    width: $base-size * 3;
-    margin: 0 $base-size * .7;
+    height: $base-size * 3.5;
+    width: $base-size * 3.5;
+    margin: 0 $base-size * 2.6;
   }
   
   &.plus::after {
@@ -52,14 +52,17 @@
 /* big plus button */
 
   &.bigplus {
-    height: $base-size * 6;
-    width: $base-size * 6;
+    height: $base-size * 8;
+    width: $base-size * 8;
     margin: 0;
     background: linear-gradient(lighten($color-success, 10%), 50%, lighten($color-plus, 15%));
-    box-shadow: 3px 8px 8px lighten($color-plus, 30%);
-    padding: $base-size;
+    opacity: 0.9;
+    box-shadow: 3px 8px 12px 3px lighten($color-plus, 30%);
+    padding: $base-size * 1.2;
     background-clip: content-box; 
     background-color: $color-light;
+    margin-left: $base-size * 20;
+    align-self: flex-start;
   }
   
   &.bigplus::after {

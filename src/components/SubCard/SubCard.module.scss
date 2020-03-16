@@ -14,7 +14,7 @@
   @include flex(row, space-between, center);
 
   .text {
-    width: 260px;
+    width: 300px;
     border: 1px solid lighten($color-dark, 70%);
     border-radius: $radius-standard;
     font-size: $base-size * 1.7;
@@ -34,9 +34,9 @@
 .items::after {
   content: "";
   position: absolute;
-  width: $base-size * 2.2;
+  width: $base-size * 2.1;
   height: $base-thickness;
-  left: -($base-size * 2.2);
+  left: -($base-size * 2.1);
   background-color: lighten($color-dark, 50%);
 }
 

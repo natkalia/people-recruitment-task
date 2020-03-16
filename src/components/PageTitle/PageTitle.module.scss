@@ -10,7 +10,7 @@
   background: linear-gradient($color-secondary, $color-primary);
   text-align: center;
   padding: ($base-size * 1.7) ($base-size * 5);
-  align-self: start;
-  min-width: 180px;
-  max-width: 200px;
+  align-self: flex-start;
+  margin-left: $base-size * 12;
+  min-width: 300px;
 }
