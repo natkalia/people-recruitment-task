@@ -1,0 +1,16 @@
+@import '../../styles/settings.scss';
+
+.component {
+  color: $color-light;
+  font-family: $font-text;
+  font-weight: 700;
+  font-size: $base-size * 2.3;
+  text-shadow: 2px 2px 2px lighten($color-dark, 20%);
+  border-radius: $radius-standard;
+  background: linear-gradient($color-secondary, $color-primary);
+  text-align: center;
+  padding: ($base-size * 1.8) ($base-size * 5);
+  align-self: start;
+  min-width: 180px;
+  max-width: 200px;
+}
