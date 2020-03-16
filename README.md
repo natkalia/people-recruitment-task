@@ -19,15 +19,15 @@ React project created as recruitment task.
 
 ## Live demo and setup for development
 
-**Live:**: Coming soon, probably with Github Pages.
+**Live:** Coming soon, probably with Github Pages.
 
-**Repository**: [https://github.com/natkalia/people-recruitment-task.git](https://github.com/natkalia/people-recruitment-task.git)
+**Repository:** [https://github.com/natkalia/people-recruitment-task.git](https://github.com/natkalia/people-recruitment-task.git)
 
 If you want to run this app at your local machine you have to **clone this repository** or just **download zip file** and unzip it locally. This is up to you. If you decide to clone this repo, you should use the below command in your command line tool: 
 ```bash
 git clone https://github.com/natkalia/people-recruitment-task.git
 ```
-After, move to the main folder of the app and use the following command which retrieves all dependencies necessary to build our application:
+After, move to the main folder of the app and use the following command which retrieves all dependencies necessary to build this application:
 ```bash
 npm install
 ```
@@ -41,7 +41,7 @@ As a result you should be taken to a browser with application running on localho
 
 Features of the mocked-up view required to be implemented as recruitment task:
 
-* Button with plus on the bottom should add a new cell (I named it Card): a popup appears with the option to enter the cell content, 
+* Button with plus on the bottom should add a new cell: a popup appears with the option to enter the cell content, 
 and after confirming the popup content disappears and a new cell is created
 * Button with plus in the Ethnicity section should add another cell to the Ethnicity section - similar to the above
 * Button with minus to the right of Ethnicity - removes all of Ethnicity (and thus Black, Hispanic as well),
@@ -62,27 +62,26 @@ Technologies used:
 * HTML
 * CSS, Sass, CSS modules
 * Javascript ES6+
-* create-react-app for React
 * React
 * Redux
 * eslint for clean code
 * shortid for generating random id
 * prop-types for props validation
-* node-sass for 
+* node-sass for compiling Sass (.scss) files
 * other you can see in package.json dependencies
 
 ## Known bugs and/or To Do's
 
-[ ] Data from dataStore.js could be stored as json or using a fake REST API
-[ ] No possibility to add new Card with Subcards - this was not required at this stage
-[ ] Custom popup could be added (e.g. or using external library)
-[ ] Card Ethnicity is for now hardcoded, this could be replaced with more dynamic solution if more 
+- [ ] Data from dataStore.js could be stored as json or using a fake REST API
+- [ ] No possibility to add new Card with Subcards - this was not required at this stage
+- [ ] Custom popup could be added (e.g. or using external library)
+- [ ] Card Ethnicity is for now hardcoded, this could be replaced with more dynamic solution if more 
 complicated cards could be rendered, especially if app would allow adding new Cards of similar structure (Card with SubCards)
-[ ] Data for subcards could be structured differently, e.g not as nested arrays, but 
+- [ ] Data for subcards could be structured differently, e.g not as nested arrays, but 
 as separate object, connected with proper Card by using relevant Card id, depending on further assumptions on architecture
-[ ] If all cards are deleted, design does not look well, mayble grey line should still be visible,
+- [ ] If all cards are deleted, design does not look well, mayble grey line should still be visible,
 but this requires refactoring of grey vertical line solution or adding one more
-[ ] Current solution is not compliant with RWD, media query breakpoints should be added in settings.scss
+- [ ] Current solution is not compliant with RWD, media query breakpoints should be added in settings.scss
 
 ## Credits
 
