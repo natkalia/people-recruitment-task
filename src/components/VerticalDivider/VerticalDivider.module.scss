@@ -1,0 +1,8 @@
+@import '../../styles/settings.scss';
+
+.component {
+  width: 1px;
+  background-color: lighten($color-dark, 50%);
+  margin-left: 0px;
+  margin-right: 80px;
+}

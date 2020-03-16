@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import PageTitle from '../PageTitle/PageTitle';
 import Button from '../Button/Button';
 import Card from '../Card/CardContainer';
+import VerticalDivider from '../VerticalDivider/VerticalDivider';
 
 class App extends React.Component {
 
@@ -29,14 +30,16 @@ class App extends React.Component {
       <div className={styles.component}>
         <PageTitle title={title}/>
         <div className={styles.content}>
-          {/* TODO: add vertical divider*/}
-          {cards.map(card =>
-            <Card 
-              key={card.id} 
-              id={card.id}
-              content={card.content} 
-              category={card.category}
-            />)}
+          <VerticalDivider/>
+          <div>
+            {cards.map(card =>
+              <Card 
+                key={card.id} 
+                id={card.id}
+                content={card.content} 
+                category={card.category}
+              />)}
+          </div>
         </div>
         <div className={styles.buttonWrapper}>
           <Button variant='bigplus' handleAddCard={()=> this.handleAddCard(addCard)} />
