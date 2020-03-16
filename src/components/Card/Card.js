@@ -60,7 +60,6 @@ class Card extends React.Component {
               <div className={styles.complicated}>
                 <SubCard key={shortid.generate()} 
                   subCardContent={category} 
-                  category={category} 
                   complicatedCategory={complicatedCategory} 
                   handleDeleteCard={() => this.handleDeleteCard(removeCard, cardId)}
                 /> 
