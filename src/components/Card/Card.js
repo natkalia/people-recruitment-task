@@ -10,7 +10,7 @@ class Card extends React.Component {
 
   static propTypes = {
     category: PropTypes.string,
-    content: PropTypes.string,
+    content: PropTypes.node,
     addSubCard: PropTypes.func,
     removeCard: PropTypes.func,
     id: PropTypes.string,

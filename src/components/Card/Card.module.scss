@@ -1,7 +1,66 @@
 @import '../../styles/settings.scss';
 
 .component {
-  background: $color-light;
+  background: linear-gradient($color-primary, $color-secondary);
   border-radius: $radius-standard 0 0 $radius-standard;
   margin-top: $base-size * 6.6;
+}
+
+.componentInner {
+  margin: $base-size 0 $base-size $base-size;
+  position: relative;
+  min-width: 410px;
+  background-color: $color-light;
+  font-family: $font-text;
+  font-size: $base-size * 1.7;
+  color: lighten($color-dark, 50%);
+}
+
+.simple {
+  border-radius: 0 $radius-standard $radius-standard 0;
+  box-shadow: 2px 4px 6px lighten($color-dark, 70%);
+  padding: $base-size/1.2;
+
+  @include flex(row, space-between, center);
+}
+
+.ethnicity {
+  border-radius: 0 $radius-standard $radius-standard 0;
+  box-shadow: 2px 4px 6px lighten($color-dark, 70%);
+  padding: $base-size * 2;
+
+  @include flex(column, center, flex-end);
+}
+
+/* horizontal line left to Card */
+.simple::after, .ethnicity::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  left: -92px;
+  background-color: lighten($color-dark, 50%);
+}
+
+.simple::before, .ethnicity::before {
+  content: "And";
+  position: absolute;
+  left: -150px;
+  font-size: $base-size * 1.7;
+}
+
+.text {  
+  color: lighten($color-dark, 20%);
+  margin: 0 $base-size;
+  font-family: $font-text;
+  font-weight: 700;
+}
+
+.buttonWrapper {
+  align-self: flex-start;
+  margin-left: $base-size * 2.2;
+}
+
+.content {
+  @include flex(row, flex-start, normal);
 }
