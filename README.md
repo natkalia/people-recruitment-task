@@ -23,7 +23,7 @@ React project created as recruitment task.
 
 **Repository:** [https://github.com/natkalia/people-recruitment-task.git](https://github.com/natkalia/people-recruitment-task.git)
 
-If you want to run this app at your local machine you have to **clone this repository** or just **download zip file** and unzip it locally. This is up to you. If you decide to clone this repo, you should use the below command in your command line tool: 
+If you want to run this app at your local machine you have to **clone this repository** or just **download zip file** and unzip it locally. If you decide to clone this repo, you should use the below command in your command line tool: 
 ```bash
 git clone https://github.com/natkalia/people-recruitment-task.git
 ```
@@ -42,16 +42,16 @@ As a result you should be taken to a browser with application running on localho
 Features of the mocked-up view required to be implemented as recruitment task:
 
 * Button with plus on the bottom should add a new cell: a popup appears with the option to enter the cell content, 
-and after confirming the popup content disappears and a new cell is created
-* Button with plus in the Ethnicity section should add another cell to the Ethnicity section - similar to the above
+and after confirming the popup content disappears and a new cell is created,
+* Button with plus in the Ethnicity section should add another cell to the Ethnicity section - similar to the above,
 * Button with minus to the right of Ethnicity - removes all of Ethnicity (and thus Black, Hispanic as well),
 * Other buttons with minuses - they remove the cell in which they are located.
 
-In my implemenentation:
+In my implemenntation:
 
-* standard cells are named Cards
-* Ethnicity section is a Card that includes SubCards (including cell with Ethinicity itself as a separate SubCard)
-* mocked-up initial data are stored in dataStore.js
+* standard cells are named Cards,
+* Ethnicity section is a Card that includes SubCards (including cell with Ethinicity itself as a separate SubCard),
+* mocked-up initial data are stored in dataStore.js.
 
 ## Technologies and tools
 
@@ -61,14 +61,14 @@ Technologies used:
 
 * HTML
 * CSS, Sass, CSS modules
+* node-sass for compiling Sass (.scss) files
 * Javascript ES6+
 * React
 * Redux
 * eslint for clean code
 * shortid for generating random id
 * prop-types for props validation
-* node-sass for compiling Sass (.scss) files
-* other you can see in package.json dependencies
+* other npm packages you can see in package.json dependencies
 
 ## Known bugs and/or To Do's
 
