@@ -6,28 +6,47 @@ class Button extends React.Component {
 
   static propTypes = {
     variant: PropTypes.string,    
+    category: PropTypes.string,
+    handleDeleteCard: PropTypes.func,
+    handleDeleteSubCard: PropTypes.func,
   };
+  
+  modifyContent = ({
+    variant, 
+    category, 
+    handleDeleteCard, 
+    handleDeleteSubCard, 
+    handleAddCard, 
+    handleAddSubCard}) => {
 
-  modifyContent = () => {
-    console.log('from modifyContent');
+    const complicatedCategory = 'Ethnicity';
+    
+    /* decide which button variant actions will be used based on variant name from props */
+    switch (variant) {
+      case 'plus':
+        return handleAddSubCard();
+      case 'minus':
+        return category !== complicatedCategory ? handleDeleteCard() : handleDeleteSubCard();
+      case 'bigplus':
+        return handleAddCard();
+      default:
+        console.log('Error: no variant found');
+    }
   }
 
   render() {
-
     /* decide which button variant classname will be used based on variant name from props */
-    const { variant } = this.props;
-    const variantClassName = 
-      styles.component + 
-      variant.split(' ').map(name => ' ' + (styles[name] || name)).join('');
-
+    const {variant} = this.props;
+    const variantClassName = styles.component + variant.split(' ').map(name => ' ' + (styles[name] || name)).join('');
     return (
       <div 
-        className= { variantClassName }
-        onClick={() => this.modifyContent()}
+        className={variantClassName}
+        onClick={() => this.modifyContent(this.props)}
       >
       </div>
     );
   }
 }
+
 
 export default Button;

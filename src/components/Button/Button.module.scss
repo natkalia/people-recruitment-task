@@ -3,76 +3,76 @@
 /* all buttons */
 
 .component {
-    border-radius: $radius-circle;
-    height: $base-size * 2.5;
-    width: $base-size * 2.5;
-    position: relative;
-    margin: $base-size;
-    transition: $transition;
-  
-    @include flex(column, center, center);
-  
-    /* minus button */
-  
-    &.minus {
-      background-color: $color-warning;
-      box-shadow: 0 4px 5px lighten($color-warning, 20%);
-    }
-    
-    &.minus::after {
-      position: absolute;
-      content: '';
-      border-bottom: 3px solid $color-light;
-      width: $base-size;
-    }
-  
-    /* plus button */
-  
-    &.plus {
-      background: linear-gradient(lighten($color-success, 10%) 25%, lighten($color-success, 20%));
-      box-shadow: 0 4px 5px lighten($color-success, 30%);
-    }
-    
-    &.plus::after {
-      position: absolute;
-      content: '';
-      border-bottom: 3px solid $color-light;
-      width: $base-size;
-    }
-    
-    &.plus::before {
-      position: absolute;
-      content: '';
-      border-left: 3px solid $color-light;
-      height: $base-size;
-    }
-  
-  /* big plus button */
-  
-    &.bigplus {
-      background: linear-gradient(lighten($color-success, 10%) 25%, lighten($color-success, 20%));
-      box-shadow: 0 4px 5px lighten($color-success, 30%);
-      height: $base-size * 5;
-      width: $base-size * 5;
-    }
-    
-    &.bigplus::after {
-      position: absolute;
-      content: '';
-      border-bottom: 5px solid $color-light;
-      width: $base-size * 2;
-    }
-    
-    &.bigplus::before {
-      position: absolute;
-      content: '';
-      border-left: 5px solid $color-light;
-      height: $base-size * 2;
-    }
-    
+  border-radius: $radius-circle;
+  height: $base-size * 2.5;
+  width: $base-size * 2.5;
+  position: relative;
+  margin: $base-size;
+  transition: $transition;
+
+  @include flex(column, center, center);
+
+  /* minus button */
+
+  &.minus {
+    background-color: $color-warning;
+    box-shadow: 0 4px 5px lighten($color-warning, 20%);
   }
   
-  .component:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  &.minus::after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid $color-light;
+    width: $base-size;
   }
+
+  /* plus button */
+
+  &.plus {
+    background: linear-gradient(lighten($color-success, 10%) 25%, lighten($color-success, 20%));
+    box-shadow: 0 4px 5px lighten($color-success, 30%);
+  }
+  
+  &.plus::after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid $color-light;
+    width: $base-size;
+  }
+  
+  &.plus::before {
+    position: absolute;
+    content: '';
+    border-left: 3px solid $color-light;
+    height: $base-size;
+  }
+
+/* big plus button */
+
+  &.bigplus {
+    background: linear-gradient(lighten($color-success, 10%) 25%, lighten($color-success, 20%));
+    box-shadow: 0 4px 5px lighten($color-success, 30%);
+    height: $base-size * 5;
+    width: $base-size * 5;
+  }
+  
+  &.bigplus::after {
+    position: absolute;
+    content: '';
+    border-bottom: 5px solid $color-light;
+    width: $base-size * 2;
+  }
+  
+  &.bigplus::before {
+    position: absolute;
+    content: '';
+    border-left: 5px solid $color-light;
+    height: $base-size * 2;
+  }
+  
+}
+
+.component:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
