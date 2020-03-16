@@ -3,7 +3,6 @@ import styles from './Card.module.scss';
 import Button from '../Button/Button';
 import SubCard from '../SubCard/SubCardContainer';
 import shortid from 'shortid';
-import VerticalDivider from '../VerticalDivider/VerticalDivider';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
@@ -61,18 +60,20 @@ class Card extends React.Component {
               <div className={styles.complicated}>
                 <SubCard key={shortid.generate()} 
                   subCardContent={category} 
+                  category={category} 
                   complicatedCategory={complicatedCategory} 
                   handleDeleteCard={() => this.handleDeleteCard(removeCard, cardId)}
                 /> 
                 {content.map(subCardContent=> 
                   (
-                    <div key={shortid.generate()} className={styles.content}>
-                      <VerticalDivider/>
-                      <SubCard 
-                        key={shortid.generate()} 
-                        subCardContent={subCardContent} 
-                        complicatedCategory={complicatedCategory} 
-                        category={complicatedCategory}/> 
+                    <div key={shortid.generate()} className={styles.singleSubCardWrapper}>
+                      <div key={shortid.generate()} className={styles.content}>
+                        <SubCard 
+                          key={shortid.generate()} 
+                          subCardContent={subCardContent} 
+                          complicatedCategory={complicatedCategory} 
+                          category={complicatedCategory}/> 
+                      </div>
                     </div>
                   )) 
                 }

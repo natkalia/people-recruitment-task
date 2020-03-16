@@ -21,8 +21,6 @@ class Button extends React.Component {
     handleAddCard, 
     handleAddSubCard}) => {
 
-    console.log(category, complicatedCategory);
-
     /* decide which button variant actions will be used based on variant name from props */
     switch (variant) {
       case 'plus':

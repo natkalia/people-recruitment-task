@@ -31,6 +31,7 @@
   &.plus {
     background: linear-gradient(lighten($color-success, 10%) 25%, lighten($color-success, 20%));
     box-shadow: 0 4px 5px lighten($color-success, 30%);
+    margin-top: 0;
   }
   
   &.plus::after {
@@ -54,6 +55,7 @@
     box-shadow: 0 4px 5px lighten($color-success, 30%);
     height: $base-size * 5;
     width: $base-size * 5;
+    margin: 0;
   }
   
   &.bigplus::after {

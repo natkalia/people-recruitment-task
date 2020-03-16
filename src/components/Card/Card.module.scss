@@ -4,17 +4,19 @@
   background: linear-gradient($color-primary, $color-secondary);
   border-radius: $radius-standard 0 0 $radius-standard;
   margin-top: $base-size * 6.6;
+  margin-left: $base-size * 6.6;
+  width: 410px;
 }
 
 .componentInner {
   margin: $base-size 0 $base-size $base-size;
   position: relative;
-  min-width: 410px;
   background-color: $color-light;
   font-family: $font-text;
   font-size: $base-size * 1.7;
   color: lighten($color-dark, 50%);
 }
+
 
 .simple {
   border-radius: 0 $radius-standard $radius-standard 0;
@@ -29,24 +31,7 @@
   box-shadow: 2px 4px 6px lighten($color-dark, 70%);
   padding: $base-size * 2;
 
-  @include flex(column, center, flex-end);
-}
-
-/* horizontal line left to Card */
-.simple::after, .complicated::after {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 1px;
-  left: -92px;
-  background-color: lighten($color-dark, 50%);
-}
-
-.simple::before, .complicated::before {
-  content: "And";
-  position: absolute;
-  left: -150px;
-  font-size: $base-size * 1.7;
+  @include flex(column, center, flex-start);
 }
 
 .text {  
@@ -56,11 +41,39 @@
   font-weight: 700;
 }
 
-.buttonWrapper {
-  align-self: flex-start;
-  margin-left: $base-size * 2.2;
-}
-
 .content {
   @include flex(row, flex-start, normal);
 }
+
+/* horizontal line left to Card */
+
+.simple::after, .complicated::after {
+  content: "";
+  position: absolute;
+  width: $base-size * 6.6;
+  height: $base-thickness;
+  left: -($base-size * 7.6);
+  background-color: lighten($color-dark, 50%);
+}
+
+/* AND text next to vertical line */
+
+.simple::before, .complicated::before {
+  content: "And";
+  position: absolute;
+  left: -($base-size * 13);
+  font-size: $base-size * 1.7;
+}
+
+/* vertical line divider in complicated Card section (Card with SubCards)*/
+
+.singleSubCardWrapper {
+  border-left: $base-thickness solid lighten($color-dark, 50%);
+  align-self: flex-end;
+}
+
+
+.buttonWrapper {
+  margin-left: $base-size;
+}
+

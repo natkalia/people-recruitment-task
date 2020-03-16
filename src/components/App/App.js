@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import PageTitle from '../PageTitle/PageTitle';
 import Button from '../Button/Button';
 import Card from '../Card/CardContainer';
-import VerticalDivider from '../VerticalDivider/VerticalDivider';
 
 class App extends React.Component {
 
@@ -35,18 +34,17 @@ class App extends React.Component {
     return (
       <div className={styles.component}>
         <PageTitle title={title}/>
-        <div className={styles.content}>
-          <VerticalDivider/>
-          <div>
-            {cards.map(card =>
+        <div className={styles.cardsWrapper}>
+          {cards.map(card =>
+            <div key={card.id} className={styles.singleCardWrapper}>
               <Card 
                 key={card.id} 
                 cardId={card.id}
                 content={card.content} 
                 category={card.category}
                 complicatedCategory={complicatedCategory}
-              />)}
-          </div>
+              />
+            </div>)}
         </div>
         <div className={styles.buttonWrapper}>
           <Button 

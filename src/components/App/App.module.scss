@@ -5,17 +5,20 @@
   margin: 0 auto;
   padding: $base-size * 3;
   padding-bottom: $base-size * 5;
-  border: 2px solid lighten($color-dark, 70%);
-  border-radius: $radius-standard;
-
   @include flex(column, center, center);
 }
 
-.content {
-  @include flex(row, center, normal);
+.cardsWrapper {
+  @include flex(column, flex-end, center);
+}
+
+/* vertical line divider next to Cards */
+
+.singleCardWrapper {
+  border-left: $base-thickness solid lighten($color-dark, 50%);
 }
 
 .buttonWrapper {
   align-self: flex-start;
-  margin-left: 20%;
+  margin-left: $base-size * 10.5;
 }
