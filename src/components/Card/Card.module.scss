@@ -1,0 +1,7 @@
+@import '../../styles/settings.scss';
+
+.component {
+  background: $color-light;
+  border-radius: $radius-standard 0 0 $radius-standard;
+  margin-top: $base-size * 6.6;
+}
