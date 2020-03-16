@@ -6,32 +6,49 @@ import PropTypes from 'prop-types';
 class SubCard extends React.Component {
 
   static propTypes = {
-    item: PropTypes.string,
+    subCardContent: PropTypes.string,
     category: PropTypes.string,
+    complicatedCategory: PropTypes.string,
     removeSubCard: PropTypes.func,
     removeCard: PropTypes.func,
     handleDeleteCard: PropTypes.func,
   }
 
-  handleDeleteSubCard = (removeSubCard, item) => {
-    removeSubCard(item);
+  handleDeleteSubCard = (removeSubCard, subCardContent) => {
+    removeSubCard(subCardContent);
   }
 
   render() {
-    const {item, category, removeSubCard, removeCard, handleDeleteCard} = this.props;
-    const complicatedCategory = 'Ethnicity';
+    const {
+      subCardContent, 
+      category, 
+      complicatedCategory,
+      removeSubCard, 
+      removeCard, 
+      handleDeleteCard, 
+    } = this.props;
     return (
       <>
-        {item !== complicatedCategory ? 
+        {subCardContent !== complicatedCategory ? 
           (
             <div className={styles.items}>
-              <span className={styles.text}>{item}</span>
-              <Button variant='minus' category={category} handleDeleteSubCard={() => this.handleDeleteSubCard(removeSubCard, item)}/>
+              <span className={styles.text}>{subCardContent}</span>
+              <Button 
+                variant='minus' 
+                category={category}
+                complicatedCategory={complicatedCategory}
+                handleDeleteSubCard={() => this.handleDeleteSubCard(removeSubCard, subCardContent)}
+              />
             </div>
           ) : (
-            <div className={styles.ethnicity}>
-              <span className={styles.text}>{item}</span>
-              <Button variant='minus' category={category} handleDeleteCard={() => handleDeleteCard(removeCard)}/>
+            <div className={styles.complicated}>
+              <span className={styles.text}>{subCardContent}</span>
+              <Button 
+                variant='minus' 
+                category={category} 
+                complicatedCategory={complicatedCategory}
+                handleDeleteCard={() => handleDeleteCard(removeCard)}
+              />
             </div>
           )}
       </>

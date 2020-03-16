@@ -10,14 +10,15 @@ class Card extends React.Component {
 
   static propTypes = {
     category: PropTypes.string,
+    complicatedCategory: PropTypes.string,
     content: PropTypes.node,
     addSubCard: PropTypes.func,
     removeCard: PropTypes.func,
-    id: PropTypes.string,
+    cardId: PropTypes.string,
   }
 
   handleAddSubCard = addSubCard => {
-    const content = prompt('Please enter new item from this category e.g. White', 'White');
+    const content = prompt('Please enter new content from this category e.g. White', 'White');
     if (content == null || content === '') {
       return;
     } else {
@@ -25,39 +26,63 @@ class Card extends React.Component {
     }
   }
 
-  handleDeleteCard = (removeCard, id) => {
-    removeCard(id);
+  handleDeleteCard = (removeCard, cardId) => {
+    removeCard(cardId);
   }
 
   render() {
-    const {category, content, addSubCard, removeCard, id} = this.props;
-    const complicatedCategory = 'Ethnicity';
+    const {
+      category, 
+      content, 
+      addSubCard, 
+      removeCard, 
+      cardId,
+      complicatedCategory,
+    } = this.props;
     return (
       <div className={styles.component}>
         <div className={styles.componentInner}>
 
-          {/* render simple Card if category not Ethnicity
-          render Card with Subcards if category Ethnicity  */}
+          {/* render simple Card if category not complicatedCategory
+          render Card with Subcards if category complicatedCategory */}
           {category !== complicatedCategory ? 
             (
               <div className={styles.simple}>
                 <span className={styles.text}>{category} {content}</span>
-                <Button variant='minus' category={category} handleDeleteCard={() => this.handleDeleteCard(removeCard, id)}/>
+                <Button 
+                  variant='minus' 
+                  category={category} 
+                  complicatedCategory={complicatedCategory} 
+                  handleDeleteCard={() => this.handleDeleteCard(removeCard, cardId)}
+                />
               </div>
             ) : 
             (
-              <div className={styles.ethnicity}>
-                <SubCard key={shortid.generate()} item={category} handleDeleteCard={() => this.handleDeleteCard(removeCard, id)}/> 
-                {content.map(item => 
+              <div className={styles.complicated}>
+                <SubCard key={shortid.generate()} 
+                  subCardContent={category} 
+                  complicatedCategory={complicatedCategory} 
+                  handleDeleteCard={() => this.handleDeleteCard(removeCard, cardId)}
+                /> 
+                {content.map(subCardContent=> 
                   (
                     <div key={shortid.generate()} className={styles.content}>
                       <VerticalDivider/>
-                      <SubCard key={shortid.generate()} item={item} category={complicatedCategory}/>
+                      <SubCard 
+                        key={shortid.generate()} 
+                        subCardContent={subCardContent} 
+                        complicatedCategory={complicatedCategory} 
+                        category={complicatedCategory}/> 
                     </div>
                   )) 
                 }
                 <div className={styles.buttonWrapper}>
-                  <Button variant='plus' category={category} handleAddSubCard={() => this.handleAddSubCard(addSubCard)}/>
+                  <Button 
+                    variant='plus' 
+                    category={category}
+                    complicatedCategory={complicatedCategory}  
+                    handleAddSubCard={() => this.handleAddSubCard(addSubCard)}
+                  />
                 </div>
               </div>
             )

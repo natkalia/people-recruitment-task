@@ -11,7 +11,7 @@
   font-size: $base-size * 1.7;
 }
 
-.ethnicity {
+.complicated {
   @include flex(row, space-between, center);
   
   .text {

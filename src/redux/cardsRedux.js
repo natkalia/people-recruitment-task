@@ -31,7 +31,7 @@ const filteredSubCards = (state, action) => {
 
 const updatedSubCard = (state, action) => {
   const updatedState = state.filter(card => {
-    if (card.category.includes('Ethnicity')) {
+    if (typeof(card.content) !== 'string') {
       return card.content.push(action.payload);
     } else
       return card.content;

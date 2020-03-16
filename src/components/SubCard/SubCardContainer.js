@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  removeSubCard: item => dispatch(createActionRemoveSubCard(item)),
+  removeSubCard: subCardContent => dispatch(createActionRemoveSubCard(subCardContent)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SubCard);

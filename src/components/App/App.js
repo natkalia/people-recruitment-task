@@ -16,16 +16,22 @@ class App extends React.Component {
   
   handleAddCard = (addCard) => {
     const newCategory = prompt('Please enter new category e.g. Nationality', 'Nationality');
-    const newItem = prompt('Please enter your text for chosen category e.g. German', 'German');    
-    if (!(newItem == null || newItem === '') || (newCategory == null || newCategory === '')) {
-      addCard(newItem, newCategory);
+    const newContent = prompt('Please enter your content for chosen category e.g. German', 'German');    
+    if (!(newContent == null || newContent === '') || (newCategory == null || newCategory === '')) {
+      addCard(newContent, newCategory);
     }
   }
 
   render() {
-    const {addCard, titles, cards} = this.props;
+    const {
+      addCard, 
+      titles, 
+      cards,
+    } = this.props;
     /* in fact hardcoded solution to get titles[0] as we have only one page title now */
     const title = titles[0].content;
+    /* hardcoded solution to get complicated category as we have only one now */
+    const complicatedCategory = 'Ethnicity';
     return (
       <div className={styles.component}>
         <PageTitle title={title}/>
@@ -35,14 +41,18 @@ class App extends React.Component {
             {cards.map(card =>
               <Card 
                 key={card.id} 
-                id={card.id}
+                cardId={card.id}
                 content={card.content} 
                 category={card.category}
+                complicatedCategory={complicatedCategory}
               />)}
           </div>
         </div>
         <div className={styles.buttonWrapper}>
-          <Button variant='bigplus' handleAddCard={()=> this.handleAddCard(addCard)} />
+          <Button 
+            variant='bigplus' 
+            handleAddCard={()=> this.handleAddCard(addCard)}
+          />
         </div>
       </div>
     );

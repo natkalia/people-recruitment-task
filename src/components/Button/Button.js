@@ -7,6 +7,7 @@ class Button extends React.Component {
   static propTypes = {
     variant: PropTypes.string,    
     category: PropTypes.string,
+    complicatedCategory: PropTypes.string,
     handleDeleteCard: PropTypes.func,
     handleDeleteSubCard: PropTypes.func,
   };
@@ -14,13 +15,14 @@ class Button extends React.Component {
   modifyContent = ({
     variant, 
     category, 
+    complicatedCategory,
     handleDeleteCard, 
     handleDeleteSubCard, 
     handleAddCard, 
     handleAddSubCard}) => {
 
-    const complicatedCategory = 'Ethnicity';
-    
+    console.log(category, complicatedCategory);
+
     /* decide which button variant actions will be used based on variant name from props */
     switch (variant) {
       case 'plus':

@@ -24,7 +24,7 @@
   @include flex(row, space-between, center);
 }
 
-.ethnicity {
+.complicated {
   border-radius: 0 $radius-standard $radius-standard 0;
   box-shadow: 2px 4px 6px lighten($color-dark, 70%);
   padding: $base-size * 2;
@@ -33,7 +33,7 @@
 }
 
 /* horizontal line left to Card */
-.simple::after, .ethnicity::after {
+.simple::after, .complicated::after {
   content: "";
   position: absolute;
   width: 80px;
@@ -42,7 +42,7 @@
   background-color: lighten($color-dark, 50%);
 }
 
-.simple::before, .ethnicity::before {
+.simple::before, .complicated::before {
   content: "And";
   position: absolute;
   left: -150px;
