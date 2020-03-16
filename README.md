@@ -79,7 +79,7 @@ Technologies used:
 complicated cards could be rendered, especially if app would allow adding new Cards of similar structure (Card with SubCards)
 - [ ] Data for subcards could be structured differently, e.g not as nested arrays, but 
 as separate object, connected with proper Card by using relevant Card id, depending on further assumptions on architecture
-- [ ] If all cards are deleted, design does not look well, mayble grey line should still be visible,
+- [x] If all cards are deleted, design does not look well, maybe grey line should still be visible,
 but this requires refactoring of grey vertical line solution or adding one more
 - [ ] Current solution is not compliant with RWD, media query breakpoints should be added in settings.scss
 
