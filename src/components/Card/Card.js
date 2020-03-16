@@ -66,7 +66,7 @@ class Card extends React.Component {
                 /> 
                 {content.map(subCardContent=> 
                   (
-                    <div key={shortid.generate()} className={styles.singleSubCardWrapper}>
+                    <div key={shortid.generate()} className={styles.subcardsWrapper}>
                       <div key={shortid.generate()} className={styles.content}>
                         <SubCard 
                           key={shortid.generate()} 

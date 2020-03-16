@@ -2,34 +2,31 @@
 
 .items {
   @include flex(row, space-between, center);
-  width: 250px;
-  align-self: end;
+  width: 280px;
   position: relative;
   border: 1px solid lighten($color-dark, 70%);
   border-radius: $radius-standard;
-  margin: $base-size/2 0;
-  margin-left: $base-size * 5;
+  margin-left: $base-size * 2;
   font-size: $base-size * 1.7;
 }
 
 .complicated {
   @include flex(row, space-between, center);
-  
+
   .text {
-    width: 250px;
+    width: 260px;
     border: 1px solid lighten($color-dark, 70%);
     border-radius: $radius-standard;
-    padding: $base-size;
-    margin: 0;
     font-size: $base-size * 1.7;
+    padding: ($base-size * .8) ($base-size * 1.5);
   }
 }
 
 .text {  
   color: lighten($color-dark, 20%);
-  margin: 0 $base-size;
   font-family: $font-text;
   font-weight: 700;
+  padding: ($base-size * .8) ($base-size * 1.5);
 }
 
 /* horizontal line left to SubCard */
@@ -37,9 +34,9 @@
 .items::after {
   content: "";
   position: absolute;
-  width: $base-size * 5.2;
+  width: $base-size * 2.2;
   height: $base-thickness;
-  left: -($base-size * 5.2);
+  left: -($base-size * 2.2);
   background-color: lighten($color-dark, 50%);
 }
 
@@ -48,7 +45,7 @@
 .items::before {
   content: "Or";
   position: absolute;
-  left: -($base-size * 8);
+  left: -($base-size * 6.6);
   font-family: $font-text;
   color: lighten($color-dark, 50%);
 }

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import PageTitle from '../PageTitle/PageTitle';
 import Button from '../Button/Button';
 import Card from '../Card/CardContainer';
+import shortid from 'shortid';
 
 class App extends React.Component {
 
@@ -36,7 +37,7 @@ class App extends React.Component {
         <PageTitle title={title}/>
         <div className={styles.cardsWrapper}>
           {cards.map(card =>
-            <div key={card.id} className={styles.singleCardWrapper}>
+            <div key={shortid.generate()}>
               <Card 
                 key={card.id} 
                 cardId={card.id}
