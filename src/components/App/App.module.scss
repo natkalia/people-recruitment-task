@@ -1,15 +1,16 @@
 @import '../../styles/settings.scss';
 
 .component {
-  width: 80%;
+  width: 60%;
   margin: ($base-size * 5) auto;
-  @include flex(column, center, center);
+  @include flex(column, center, flex-start);
 }
 
 /* vertical line divider next to Cards */
 
 .cardsWrapper {
-  @include flex(column, flex-end, center);
+  @include flex(column, center, flex-start);
   border-left: $base-thickness solid lighten($color-dark, 50%);
   padding: ($base-size * 4.2) 0;
+  margin-left: ($base-size * 12);
 }

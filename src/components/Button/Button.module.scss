@@ -61,8 +61,10 @@
     padding: $base-size * 1.2;
     background-clip: content-box; 
     background-color: $color-light;
-    margin-left: $base-size * 20;
     align-self: flex-start;
+
+    margin-left: ($base-size * 8);
+
   }
   
   &.bigplus::after {
