@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 
 const App = ({titles}) => {
 
-  {/* in fact hardcoded solution to get titles[0] as we have only one page title now */}
+  // in fact hardcoded solution to get titles[0] as we have only one page title now 
   const title = titles[0].content;
 
   return (
@@ -15,7 +15,9 @@ const App = ({titles}) => {
       <PageTitle title={title}/>
 
       <div>
-        <Button/>
+        <Button variant='minus'/>
+        <Button variant='plus'/>
+        <Button variant='bigplus'/>
       </div>
 
     </div>
