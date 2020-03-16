@@ -1,0 +1,21 @@
+@import '../../styles/settings.scss';
+
+.component {
+  width: 60%;
+  margin: 0 auto;
+  padding: $base-size * 3;
+  padding-bottom: $base-size * 5;
+  border: 2px solid lighten($color-dark, 70%);
+  border-radius: $radius-standard;
+
+  @include flex(column, center, center);
+}
+
+.content {
+  @include flex(row, center, normal);
+}
+
+.buttonWrapper {
+  align-self: flex-start;
+  margin-left: 20%;
+}
