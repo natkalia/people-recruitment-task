@@ -19,7 +19,7 @@ React project created as recruitment task.
 
 ## Live demo and setup for development
 
-**Live:** Coming soon, probably with Github Pages.
+**Live:** [https://natkalia.github.io/people-recruitment-task](https://natkalia.github.io/people-recruitment-task)
 
 **Repository:** [https://github.com/natkalia/people-recruitment-task.git](https://github.com/natkalia/people-recruitment-task.git)
 
