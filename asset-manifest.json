@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/people-recruitment-task/static/css/main.9ae8c894.chunk.css",
-    "main.js": "/people-recruitment-task/static/js/main.bb4b94f7.chunk.js",
-    "main.js.map": "/people-recruitment-task/static/js/main.bb4b94f7.chunk.js.map",
+    "main.css": "/people-recruitment-task/static/css/main.e40eb4b7.chunk.css",
+    "main.js": "/people-recruitment-task/static/js/main.6045025b.chunk.js",
+    "main.js.map": "/people-recruitment-task/static/js/main.6045025b.chunk.js.map",
     "runtime-main.js": "/people-recruitment-task/static/js/runtime-main.1361e070.js",
     "runtime-main.js.map": "/people-recruitment-task/static/js/runtime-main.1361e070.js.map",
     "static/js/2.c786fb57.chunk.js": "/people-recruitment-task/static/js/2.c786fb57.chunk.js",
     "static/js/2.c786fb57.chunk.js.map": "/people-recruitment-task/static/js/2.c786fb57.chunk.js.map",
     "index.html": "/people-recruitment-task/index.html",
-    "precache-manifest.4f039e019b87924fdc54c3670cd7c517.js": "/people-recruitment-task/precache-manifest.4f039e019b87924fdc54c3670cd7c517.js",
+    "precache-manifest.f9ab55017f7796da08d8f5a0ba8e1268.js": "/people-recruitment-task/precache-manifest.f9ab55017f7796da08d8f5a0ba8e1268.js",
     "service-worker.js": "/people-recruitment-task/service-worker.js",
-    "static/css/main.9ae8c894.chunk.css.map": "/people-recruitment-task/static/css/main.9ae8c894.chunk.css.map",
+    "static/css/main.e40eb4b7.chunk.css.map": "/people-recruitment-task/static/css/main.e40eb4b7.chunk.css.map",
     "static/js/2.c786fb57.chunk.js.LICENSE.txt": "/people-recruitment-task/static/js/2.c786fb57.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1361e070.js",
     "static/js/2.c786fb57.chunk.js",
-    "static/css/main.9ae8c894.chunk.css",
-    "static/js/main.bb4b94f7.chunk.js"
+    "static/css/main.e40eb4b7.chunk.css",
+    "static/js/main.6045025b.chunk.js"
   ]
 }
