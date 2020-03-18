@@ -24,7 +24,7 @@ export const cards = [
   {
     id: shortid.generate(),
     category: 'Income',
-    content: 'yearly 15k USD +',
+    content: 'yearly 45k USD+',
   },
 ];
 
