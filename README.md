@@ -82,6 +82,7 @@ as separate object, connected with proper Card by using relevant Card id, depend
 - [x] If all cards are deleted, design does not look well, maybe grey line should still be visible,
 but this requires refactoring of grey vertical line solution or adding one more
 - [ ] Current solution is not compliant with RWD, media query breakpoints should be added in settings.scss
+- [ ] Bug in redux devtools diff/state with SubCards. Problem with updating state/diff when deeply nested items changed (UI working properly)
 
 ## Credits
 

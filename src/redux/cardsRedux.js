@@ -18,25 +18,33 @@ export const createActionRemoveSubCard = payload => ({ type: REMOVE_SUBCARD, pay
 
 // reducer helper functions
 
-const filteredSubCards = (state, action) => {
-  const filteredState = state.filter(card => {
-    if (card.content.includes(action.payload)) {
-      const index = card.content.indexOf(action.payload);
-      return card.content.splice(index, 1);
-    } else
-      return card.content;
-  });
-  return filteredState;
+const removedCard = (state, payload) => {
+  const newState = state.filter(card => card.id !== payload);
+  return newState;
 };
 
-const updatedSubCard = (state, action) => {
-  const updatedState = state.filter(card => {
-    if (typeof(card.content) !== 'string') {
-      return card.content.push(action.payload);
-    } else
-      return card.content;
+const addedSubCard = (state, payload) => {
+  let newState = [...state];
+  newState = newState.filter((element) => {
+    if (typeof(element.content) !== 'string') {
+      return element.content.push(payload);
+    } else {
+      return element.content;
+    }
   });
-  return updatedState;
+  return newState;
+};
+
+const removedSubCard = (state, payload) => {
+  let newState = [...state];
+  newState = newState.filter((element) => {
+    if (element.content.includes(payload)) {
+      const indexSubcard = element.content.indexOf(payload);
+      return element.content.splice(indexSubcard, 1);
+    } else
+      return element.content;
+  });
+  return newState;
 };
 
 // reducer
@@ -44,12 +52,12 @@ export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_CARD:
       return [...state, action.payload];
-    case ADD_SUBCARD:
-      return updatedSubCard(state, action);
     case REMOVE_CARD:
-      return state.filter(card => card.id !== action.payload); 
+      return removedCard(state, action.payload);
+    case ADD_SUBCARD:
+      return addedSubCard(state, action.payload);
     case REMOVE_SUBCARD:
-      return filteredSubCards(state, action);
+      return removedSubCard(state, action.payload);
     default:
       return state;
   }
